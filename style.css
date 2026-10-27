@@ -409,3 +409,67 @@ textarea { min-height: 84px; resize: vertical; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
   }
+/* FerotDao: Fix record form submit button visibility */
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: min(100% - 24px, 560px);
+  max-height: 90vh;
+  max-height: 90dvh;
+  overflow: hidden;
+}
+
+.record-form,
+#recordForm {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.modal-header {
+  flex: 0 0 auto;
+}
+
+.modal-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 20px;
+  background: var(--surface, #171c19);
+  border-top: 1px solid var(--border, #303833);
+}
+
+.modal-footer button {
+  min-height: 44px;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .modal {
+    width: calc(100% - 20px);
+    max-height: 92vh;
+    max-height: 92dvh;
+  }
+
+  .modal-footer {
+    padding: 12px 15px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
+  .modal-footer .button {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
