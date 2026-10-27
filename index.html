@@ -21,25 +21,41 @@
         <button class="icon-button sidebar-close" id="closeSidebar" aria-label="মেনু বন্ধ">×</button>
       </div>
 
-      <div class="credit-top">Designed and Maintained by<br><strong>Md. Shah Juhayer</strong></div>
+      <div class="credit-top">
+        Designed and Maintained by<br>
+        <strong>Md. Shah Juhayer</strong>
+      </div>
 
       <div class="nav-label">মূল মেনু</div>
       <nav class="navigation" aria-label="প্রধান নেভিগেশন">
-        <button class="nav-link active" data-page="dashboard"><span class="nav-icon">▦</span> ড্যাশবোর্ড</button>
-        <button class="nav-link" data-page="transactions"><span class="nav-icon">৳</span> টাকার হিসাব</button>
-        <button class="nav-link" data-page="items"><span class="nav-icon">▤</span> জিনিসপত্র</button>
-        <button class="nav-link" data-page="friends"><span class="nav-icon">♙</span> বন্ধুদের তালিকা</button>
+        <button class="nav-link active" data-page="dashboard">
+          <span class="nav-icon">▦</span> ড্যাশবোর্ড
+        </button>
+        <button class="nav-link" data-page="transactions">
+          <span class="nav-icon">৳</span> টাকার হিসাব
+        </button>
+        <button class="nav-link" data-page="items">
+          <span class="nav-icon">▤</span> জিনিসপত্র
+        </button>
+        <button class="nav-link" data-page="friends">
+          <span class="nav-icon">♙</span> বন্ধুদের তালিকা
+        </button>
       </nav>
 
       <div class="nav-label">অন্যান্য</div>
       <nav class="navigation">
-        <button class="nav-link" data-page="settings"><span class="nav-icon">⚙</span> সেটিংস ও ব্যাকআপ</button>
+        <button class="nav-link" data-page="settings">
+          <span class="nav-icon">⚙</span> সেটিংস ও ব্যাকআপ
+        </button>
       </nav>
 
       <div class="sidebar-bottom">
         <div class="sidebar-note">
           <span class="status-dot"></span>
-          <div><strong>আপনার ডেটা</strong><small>এই ব্রাউজারেই সংরক্ষিত</small></div>
+          <div>
+            <strong>আপনার ডেটা</strong>
+            <small>এই ব্রাউজারেই সংরক্ষিত</small>
+          </div>
         </div>
         <div class="sidebar-credit">© <span id="year"></span> FerotDao</div>
       </div>
@@ -59,6 +75,7 @@
         <button class="button button-primary top-add" id="topAddButton">＋ নতুন হিসাব</button>
       </header>
 
+      <!-- Dashboard -->
       <section class="page-content" id="page-dashboard">
         <div class="welcome-row">
           <div>
@@ -70,22 +87,37 @@
 
         <div class="stats-grid">
           <article class="stat-card">
-            <div class="stat-heading"><span>আপনি পাবেন</span><span class="stat-icon green">↙</span></div>
+            <div class="stat-heading">
+              <span>আপনি পাবেন</span>
+              <span class="stat-icon green">↙</span>
+            </div>
             <strong class="stat-value" id="statReceivable">৳ ০</strong>
             <small>অন্যদের কাছে আপনার পাওনা</small>
           </article>
+
           <article class="stat-card">
-            <div class="stat-heading"><span>আপনার দিতে হবে</span><span class="stat-icon orange">↗</span></div>
+            <div class="stat-heading">
+              <span>আপনার দিতে হবে</span>
+              <span class="stat-icon orange">↗</span>
+            </div>
             <strong class="stat-value" id="statPayable">৳ ০</strong>
             <small>অন্যদের কাছ থেকে নেওয়া বাকি</small>
           </article>
+
           <article class="stat-card">
-            <div class="stat-heading"><span>বাকি টাকা</span><span class="stat-icon blue">৳</span></div>
+            <div class="stat-heading">
+              <span>বাকি টাকা</span>
+              <span class="stat-icon blue">৳</span>
+            </div>
             <strong class="stat-value" id="statNet">৳ ০</strong>
             <small>পাওনা থেকে দেনা বাদ দিয়ে</small>
           </article>
+
           <article class="stat-card">
-            <div class="stat-heading"><span>ফেরত বাকি জিনিস</span><span class="stat-icon purple">▤</span></div>
+            <div class="stat-heading">
+              <span>ফেরত বাকি জিনিস</span>
+              <span class="stat-icon purple">▤</span>
+            </div>
             <strong class="stat-value" id="statItems">০টি</strong>
             <small>এখনো ফেরত সম্পন্ন হয়নি</small>
           </article>
@@ -94,7 +126,10 @@
         <div class="dashboard-grid">
           <section class="panel">
             <div class="panel-header">
-              <div><h3>সাম্প্রতিক টাকার হিসাব</h3><p>সর্বশেষ যোগ করা রেকর্ড</p></div>
+              <div>
+                <h3>সাম্প্রতিক টাকার হিসাব</h3>
+                <p>সর্বশেষ যোগ করা রেকর্ড</p>
+              </div>
               <button class="text-button" data-goto="transactions">সব দেখুন →</button>
             </div>
             <div id="recentTransactions" class="table-wrap"></div>
@@ -102,7 +137,10 @@
 
           <section class="panel">
             <div class="panel-header">
-              <div><h3>ফেরতযোগ্য জিনিসপত্র</h3><p>যেসব জিনিসের হিসাব খোলা আছে</p></div>
+              <div>
+                <h3>ফেরতযোগ্য জিনিসপত্র</h3>
+                <p>যেসব জিনিসের হিসাব খোলা আছে</p>
+              </div>
               <button class="text-button" data-goto="items">সব দেখুন →</button>
             </div>
             <div id="recentItems" class="compact-list"></div>
@@ -111,21 +149,53 @@
 
         <section class="panel">
           <div class="panel-header">
-            <div><h3>দ্রুত কাজ</h3><p>কয়েক সেকেন্ডেই নতুন রেকর্ড যোগ করুন</p></div>
+            <div>
+              <h3>দ্রুত কাজ</h3>
+              <p>কয়েক সেকেন্ডেই নতুন রেকর্ড যোগ করুন</p>
+            </div>
           </div>
+
           <div class="quick-actions">
-            <button class="quick-action" data-action="lend"><span class="quick-icon green">↙</span><span><strong>টাকা দিয়েছি</strong><small>কেউ আপনার কাছে টাকা ফেরত দেবে</small></span><span class="quick-arrow">→</span></button>
-            <button class="quick-action" data-action="borrow"><span class="quick-icon orange">↗</span><span><strong>টাকা নিয়েছি</strong><small>আপনাকে টাকা ফেরত দিতে হবে</small></span><span class="quick-arrow">→</span></button>
-            <button class="quick-action" data-action="item"><span class="quick-icon purple">▤</span><span><strong>জিনিসের হিসাব</strong><small>দেওয়া বা নেওয়া জিনিস যোগ করুন</small></span><span class="quick-arrow">→</span></button>
+            <button class="quick-action" data-action="lend">
+              <span class="quick-icon green">↙</span>
+              <span>
+                <strong>টাকা দিয়েছি</strong>
+                <small>কেউ আপনার কাছে টাকা ফেরত দেবে</small>
+              </span>
+              <span class="quick-arrow">→</span>
+            </button>
+
+            <button class="quick-action" data-action="borrow">
+              <span class="quick-icon orange">↗</span>
+              <span>
+                <strong>টাকা নিয়েছি</strong>
+                <small>আপনাকে টাকা ফেরত দিতে হবে</small>
+              </span>
+              <span class="quick-arrow">→</span>
+            </button>
+
+            <button class="quick-action" data-action="item">
+              <span class="quick-icon purple">▤</span>
+              <span>
+                <strong>জিনিসের হিসাব</strong>
+                <small>দেওয়া বা নেওয়া জিনিস যোগ করুন</small>
+              </span>
+              <span class="quick-arrow">→</span>
+            </button>
           </div>
         </section>
       </section>
 
+      <!-- Transactions -->
       <section class="page-content hidden" id="page-transactions">
         <div class="section-intro">
-          <div><h2>টাকার হিসাব</h2><p>টাকা দেওয়া, নেওয়া, আংশিক ফেরত ও বাকি টাকার রেকর্ড।</p></div>
+          <div>
+            <h2>টাকার হিসাব</h2>
+            <p>টাকা দেওয়া, নেওয়া, আংশিক ফেরত ও বাকি টাকার রেকর্ড।</p>
+          </div>
           <button class="button button-primary" data-action="lend">＋ নতুন হিসাব</button>
         </div>
+
         <div class="filter-bar">
           <input id="transactionSearch" type="search" placeholder="নাম বা বিবরণ দিয়ে খুঁজুন..." aria-label="টাকার হিসাব খুঁজুন">
           <select id="transactionFilter" aria-label="টাকার হিসাব ফিল্টার">
@@ -136,16 +206,22 @@
             <option value="settled">সম্পূর্ণ পরিশোধ</option>
           </select>
         </div>
+
         <section class="panel">
           <div id="allTransactions" class="table-wrap"></div>
         </section>
       </section>
 
+      <!-- Items -->
       <section class="page-content hidden" id="page-items">
         <div class="section-intro">
-          <div><h2>জিনিসপত্রের হিসাব</h2><p>ধার দেওয়া বা নেওয়া জিনিস এবং ফেরতের অবস্থা রাখুন।</p></div>
+          <div>
+            <h2>জিনিসপত্রের হিসাব</h2>
+            <p>ধার দেওয়া বা নেওয়া জিনিস এবং ফেরতের অবস্থা রাখুন।</p>
+          </div>
           <button class="button button-primary" data-action="item">＋ জিনিস যোগ করুন</button>
         </div>
+
         <div class="filter-bar">
           <input id="itemSearch" type="search" placeholder="জিনিস বা ব্যক্তির নাম দিয়ে খুঁজুন..." aria-label="জিনিসপত্র খুঁজুন">
           <select id="itemFilter" aria-label="জিনিসপত্র ফিল্টার">
@@ -156,24 +232,36 @@
             <option value="returned">ফেরত সম্পন্ন</option>
           </select>
         </div>
+
         <div id="allItems" class="items-grid"></div>
       </section>
 
+      <!-- Friends -->
       <section class="page-content hidden" id="page-friends">
         <div class="section-intro">
-          <div><h2>বন্ধুদের তালিকা</h2><p>যাদের সঙ্গে টাকা বা জিনিসপত্রের হিসাব আছে।</p></div>
+          <div>
+            <h2>বন্ধুদের তালিকা</h2>
+            <p>যাদের সঙ্গে টাকা বা জিনিসপত্রের হিসাব আছে।</p>
+          </div>
           <button class="button button-primary" id="addFriendButton">＋ বন্ধু যোগ করুন</button>
         </div>
+
         <div class="filter-bar">
           <input id="friendSearch" type="search" placeholder="বন্ধুর নাম বা ফোন খুঁজুন..." aria-label="বন্ধু খুঁজুন">
         </div>
+
         <div id="friendsGrid" class="friends-grid"></div>
       </section>
 
+      <!-- Settings -->
       <section class="page-content hidden" id="page-settings">
         <div class="section-intro">
-          <div><h2>সেটিংস ও ব্যাকআপ</h2><p>আপনার ডেটা সংরক্ষণ, পুনরুদ্ধার ও অ্যাপ ব্যবস্থাপনা।</p></div>
+          <div>
+            <h2>সেটিংস ও ব্যাকআপ</h2>
+            <p>আপনার ডেটা সংরক্ষণ, পুনরুদ্ধার ও অ্যাপ ব্যবস্থাপনা।</p>
+          </div>
         </div>
+
         <div class="settings-grid">
           <section class="panel settings-card">
             <div class="settings-symbol">⇩</div>
@@ -181,6 +269,7 @@
             <p>সব বন্ধু, টাকার হিসাব ও জিনিসপত্র JSON ফাইলে ডাউনলোড করুন।</p>
             <button class="button button-primary full-width" id="exportButton">ব্যাকআপ ডাউনলোড</button>
           </section>
+
           <section class="panel settings-card">
             <div class="settings-symbol">⇧</div>
             <h3>ব্যাকআপ থেকে পুনরুদ্ধার</h3>
@@ -188,12 +277,14 @@
             <label class="button button-secondary full-width file-label" for="importFile">ব্যাকআপ ফাইল নির্বাচন</label>
             <input class="visually-hidden" id="importFile" type="file" accept=".json,application/json">
           </section>
+
           <section class="panel settings-card">
             <div class="settings-symbol">▣</div>
             <h3>ডেটা সংরক্ষণের অবস্থা</h3>
             <p id="storageStatus">ডেটা সংরক্ষণের তথ্য লোড হচ্ছে...</p>
             <button class="button button-secondary full-width" id="refreshStatusButton">অবস্থা দেখুন</button>
           </section>
+
           <section class="panel settings-card danger-card">
             <div class="settings-symbol danger-symbol">!</div>
             <h3>সব ডেটা মুছে ফেলুন</h3>
@@ -201,10 +292,13 @@
             <button class="button button-danger full-width" id="clearDataButton">সব ডেটা মুছুন</button>
           </section>
         </div>
+
         <section class="panel about-panel">
           <h3>FerotDao সম্পর্কে</h3>
           <p>FerotDao একটি ব্যক্তিগত হিসাব ব্যবস্থাপনা অ্যাপ। এটি কোনো ব্যাংকিং বা পেমেন্ট সেবা নয়। অ্যাপের রেকর্ডের ভিত্তিতে কোনো টাকা স্বয়ংক্রিয়ভাবে আদান-প্রদান হয় না।</p>
-          <div class="about-credit">Designed and Maintained by <strong>Md. Shah Juhayer</strong></div>
+          <div class="about-credit">
+            Designed and Maintained by <strong>Md. Shah Juhayer</strong>
+          </div>
           <small>Version 1.0.0 · Local browser storage</small>
         </section>
       </section>
@@ -216,30 +310,46 @@
     </main>
   </div>
 
+  <!-- Add / Edit Record Modal -->
   <div class="modal-backdrop hidden" id="modalBackdrop">
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-header">
-        <div><h2 id="modalTitle">নতুন হিসাব</h2><p id="modalDescription">প্রয়োজনীয় তথ্য পূরণ করুন।</p></div>
-        <button class="icon-button" id="closeModal" aria-label="বন্ধ করুন">×</button>
+        <div>
+          <h2 id="modalTitle">নতুন হিসাব</h2>
+          <p id="modalDescription">প্রয়োজনীয় তথ্য পূরণ করুন।</p>
+        </div>
+        <button class="icon-button" id="closeModal" type="button" aria-label="বন্ধ করুন">×</button>
       </div>
-      <form id="recordForm">
+
+      <form id="recordForm" class="record-form">
         <div id="modalBody" class="modal-body"></div>
+
+        <!-- Always visible form action buttons -->
         <div class="modal-footer">
-          <button type="button" class="button button-secondary" id="cancelModal">বাতিল</button>
-          <button type="submit" class="button button-primary" id="saveRecordButton">সংরক্ষণ করুন</button>
+          <button type="button" class="button button-secondary" id="cancelModal">
+            বাতিল
+          </button>
+
+          <button type="submit" class="button button-primary" id="saveRecordButton">
+            হিসাব সংরক্ষণ করুন
+          </button>
         </div>
       </form>
     </section>
   </div>
 
+  <!-- Toast Notifications -->
   <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Confirmation Dialog -->
   <div class="confirm-backdrop hidden" id="confirmBackdrop">
     <section class="confirm-dialog" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle">
       <h3 id="confirmTitle">আপনি কি নিশ্চিত?</h3>
       <p id="confirmMessage">এই কাজটি সম্পন্ন করবেন?</p>
+
       <div class="confirm-actions">
-        <button class="button button-secondary" id="confirmCancel">বাতিল</button>
-        <button class="button button-danger" id="confirmAccept">নিশ্চিত করুন</button>
+        <button class="button button-secondary" id="confirmCancel" type="button">বাতিল</button>
+        <button class="button button-danger" id="confirmAccept" type="button">নিশ্চিত করুন</button>
       </div>
     </section>
   </div>
